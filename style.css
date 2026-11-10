@@ -1,0 +1,124 @@
+/* ==========================================================================
+   AsiaTorta - Estilos Complementarios y Animaciones Personalizadas
+   Diseño de Alta Fidelidad - IHC Food Experience
+   ========================================================================== */
+
+/* Importación de fuentes tipográficas modernas */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-red: #dc2626;
+  --primary-gold: #f59e0b;
+  --bg-dark: #0b0f19;
+  --card-dark: #111827;
+  --text-main: #f9fafb;
+}
+
+/* Configuración base de scroll y renderizado */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Scrollbar personalizado y elegante */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e11d48;
+}
+
+/* Efectos de vidrio (Glassmorphism) */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-header {
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-badge {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Animaciones sutiles */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(239, 68, 68, 0.4); }
+  50% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.6); }
+}
+
+@keyframes cartBounce {
+  0%, 100% { transform: scale(1); }
+  30% { transform: scale(1.25) rotate(-5deg); }
+  60% { transform: scale(1.15) rotate(5deg); }
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-cart-pop {
+  animation: cartBounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Transición suave para el drawer del carrito */
+.cart-drawer-transition {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease-in-out;
+}
+
+/* Estilos de badges con gradiente para comida */
+.badge-spicy {
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+}
+
+.badge-special {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.badge-veggie {
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+}
+
+/* Gradientes de texto llamativos */
+.text-gradient-fire {
+  background: linear-gradient(135deg, #fb923c 0%, #f43f5e 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fde047 0%, #eab308 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
